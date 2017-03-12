@@ -1,0 +1,434 @@
+// File Name: state.less
+// Description: global MediaQueries styles
+// Used by: style.less
+// Dependencies:
+// ------------------------------------------------------------
+
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		max-width: 1440px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	/* ============ */
+	/* === MAIN === */
+
+	/* === Intro === */
+	#intro {
+		&.container {
+			img {
+				left: 20px;
+			}
+		}
+	}
+	/* === END // Intro === */
+
+
+	/* === History Block === */
+	#history {
+		.col-lg-6 {
+			text-align: center;
+		}
+	}
+	/* === END // History Block === */
+
+	/* === END // MAIN === */
+	/* =================== */
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1366px) and (orientation: landscape) {
+	/* ====================== */
+	/* === GLOBAL CLASSES === */
+	.btn {
+		margin-top: 170px;
+	}
+	/* === END // GLOBAL CLASSES === */
+	/* ============================= */
+
+
+	/* ============ */
+	/* === MAIN === */
+
+	/* === Intro === */
+	#intro {
+		&.container {
+			padding-bottom: 70px;
+		}
+	}
+	/* === END // Intro === */
+
+	/* === END // MAIN === */
+	/* =================== */
+}
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 2.5em;
+		line-height: 1.3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+
+	/* ============== */
+	/* === HEADER === */
+	header {
+		height: 670px;
+	}
+	/* === END // HEADER === */
+	/* ===================== */
+
+
+	/* ============ */
+	/* === MAIN === */
+
+	/* === Intro === */
+	#intro {
+		&.container {
+			padding: 90px 0;
+
+			img {
+				max-width: 530px;
+			}
+		}
+	}
+	/* === END // Intro === */
+
+
+	/* === switchItems === */
+	
+	/* Icons */
+	#switchItems {
+		ul {
+			li {
+				a.circle {
+					width: 105px;
+					height: 105px;
+
+					&:before {
+						width: 50px;
+						height: 50px;
+						margin: -25px 0 0 -25px;
+						background-size: 100px;
+					}
+				}
+
+				&.item-1 {
+					a.circle {
+						&:hover:before {
+						 	background-position: -50px 0px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -50px 0px;
+							}
+						}
+					}
+				}
+
+				&.item-2 {
+					a.circle {
+						&:before {
+							background-position: 0 100px;
+						}
+
+						&:hover:before {
+						 	background-position: -50px 100px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -50px 100px;
+							}
+						}
+					}
+				}
+
+				&.item-3 {
+					a.circle {
+						&:before {
+							background-position: 0 50px;
+						}
+
+						&:hover:before {
+						 	background-position: -50px 50px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -50px 50px;
+							}
+						}
+					}
+				}
+			}
+		} 
+	}
+	/* === END // switchItems === */
+
+
+	/* === switchContent === */
+	#switchContent {
+		&.container {
+			padding: 120px 0;
+		}
+		
+	}
+	/* === END // switchContent === */
+
+	/* === END // MAIN === */
+	/* =================== */
+}
+
+
+@media screen and (max-width: 768px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	/* ============ */
+	/* === MAIN === */
+
+	/* === Intro === */
+	#intro {
+		text-align: center;
+
+		.col-sm-6 {
+			img {
+				margin-top: 40px;
+				position: initial;
+				width: 100%;
+			}
+		} 
+	}
+	/* === END // Intro === */
+
+	/* === switchItems === */
+	#switchItems {
+		position: relative;
+		padding: 0;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -29px;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-top: 30px solid #6a2e92;
+			margin-left: -25px;
+		}
+
+		ul {
+			li.active {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	/* === END // switchItems === */
+	
+	/* === END // MAIN === */
+	/* =================== */
+}
+
+@media screen and (max-width: 570px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+
+	/* ============== */
+	/* === HEADER === */
+	header {
+		height: 355px;
+	}
+
+	/* Logo */
+	#logo {
+		width: 280px;
+		height: 170px;
+
+		a {
+			img {
+				max-width: 180px;
+			}
+		} 
+	}
+	/* END // Logo */
+
+	/* === END // HEADER === */
+	/* ===================== */
+
+
+	/* ============ */
+	/* === MAIN === */
+
+	/* === switchItems === */
+	#switchItems {
+		.container {
+			padding: 40px 0;
+		}
+
+		&:after {
+				bottom: -29px;
+		}
+
+		ul {
+			li {
+				height: auto;
+				font-size: 0.75em;
+
+				/* Icons */
+				a.circle {
+					width: 80px;
+					height: 80px;
+					margin-bottom: 15px;
+
+					&:before {
+						width: 40px;
+						height: 40px;
+						margin: -20px 0 0 -20px;
+						background-size: 80px;
+					}
+				}
+
+				&.item-1 {
+					a.circle {
+						&:hover:before {
+						 	background-position: -40px 0px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -40px 0px;
+							}
+						}
+					}
+				}
+
+				&.item-2 {
+					a.circle {
+						&:before {
+							background-position: 0 80px;
+						}
+
+						&:hover:before {
+						 	background-position: -40px 80px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -40px 80px;
+							}
+						}
+					}
+				}
+
+				&.item-3 {
+					a.circle {
+						&:before {
+							background-position: 0 40px;
+						}
+
+						&:hover:before {
+						 	background-position: -40px 40px;
+						}
+					}
+
+					&.active {
+						a.circle {
+							&:before {
+								background-position: -40px 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* === END // switchItems === */
+
+
+	/* === switchContent === */
+	#switchContent {
+		.container {
+			padding: 90px 0;
+		}
+	} 
+	/* === END // switchContent === */
+	
+
+	/* === History Block === */
+	#history {
+		.logoLiberty {
+			max-width: 230px;
+		}
+	}
+	/* === END // History Block === */
+
+	/* === END // MAIN === */
+	/* =================== */
+}
+
+@media screen and (max-width: 414px) {
+	header {
+		background-size: 190%;
+	}
+}
+
+
+@media screen and (max-width: 374px) {
+	/* ============ */
+	/* === MAIN === */
+
+	/* === switchItems === */
+
+	/* Icons */
+	#switchItems {
+
+		.container {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		ul {
+			li {
+				a.circle {
+					margin-bottom: 0;
+				}
+
+				.link {
+					display: none;
+				}
+			}
+		}
+	} 
+	/* END //  Icons */
+
+	/* === END // switchItems === */
+
+	/* === END // MAIN === */
+	/* =================== */
+}

@@ -1,0 +1,339 @@
+// File Name: layout.less
+// Description: global Layout styles
+// Used by: style.less
+// Dependencies:
+// ------------------------------------------------------------
+
+
+/* ====================== */
+/* === GLOBAL CLASSES === */
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 2px solid #000000;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  .transition(all 0.2s ease);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+   background-color: #000000;
+   color: #ffffff;
+}
+
+img.mobile {
+  display: none;
+}
+/* === END // GLOBAL CLASSES === */
+/* ============================= */
+
+
+/* ============ */
+/* === GRID === */
+.centered {
+	float: none;
+	margin: 0px auto;
+}
+
+.container {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	padding-left: 0;
+	padding-right: 0;
+
+	> .row {
+		padding: 0 100%/1440px*140px;
+	}
+
+	.col-xs-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+/* === END // GRID === */
+/* =================== */
+
+
+/* ============== */
+/* === HEADER === */
+
+header {
+	position: relative;
+	width: 100%;
+	height: 800px;
+	background: url('../img/pattern.jpg') repeat top center;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 20px;
+}
+
+/* === Logo === */
+#logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	.translate(-50%, -50%);
+	width: 430px;
+	height: 250px;
+	background-color: @baseColor-one;
+	box-sizing: border-box;
+
+	&::before {
+		content: ' ';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	a {
+		display: inline-block;
+		vertical-align: middle;
+
+		img {
+			border: 0px;
+			max-width: 240px;
+			width: 100%;
+			outline: 0;
+		}
+	}
+}
+/* === END // Logo === */
+
+/* === END // HEADER === */
+/* ===================== */
+
+
+/* ============ */
+/* === MAIN === */
+main {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+section {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+/* === Intro === */
+#intro {
+
+	&.container {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
+	.col-sm-6 {
+		position: relative;
+
+		img {
+			position: absolute;
+			left: -50px;
+			z-index: -1;
+			text-align: center; 
+		}
+	}
+}
+/* === END // Intro === */
+
+
+/* === switch Content || Navigation === */
+#switchItems {
+	background-color: @baseColor-one;
+
+	ul {
+		display: inline-block;
+		width: 100%;
+
+		li {
+			position: relative;
+			float: left;
+			width: 33.333333339%;
+			height: 210px;
+			padding: 0 15px;
+			box-sizing: border-box;
+			vertical-align: top;
+			list-style-type: none;
+			text-align: center;
+			color: #ffffff; 
+
+			a {
+				color: #ffffff;
+				text-decoration: none;
+
+
+				// Icons
+				&.circle {
+					position: relative;
+					display: block;
+					width: 120px;
+					height: 120px;
+					margin: 0px auto;
+					margin-bottom: 35px;
+					-webkit-border-radius: 50%;
+					-moz-border-radius: 50%;
+					border-radius: 50%;
+					background-color: #ffffff;
+					.transition(background-color 0.2s ease);
+
+					&:hover {
+						background-color: @baseColor-two;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 65px;
+						height: 65px;
+						margin: -33px 0 0 -32px;
+						background-image: url('../img/ico_sprite.png');
+					}
+				}
+			}
+
+			// Hover & Active Stat
+			&.active {
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -129px;
+					border-left: 25px solid transparent;
+					border-right: 25px solid transparent;
+					border-top: 30px solid @baseColor-one;
+					margin-left: -25px;
+				}
+
+				a.circle {
+					background-color: @baseColor-two;
+				}
+			}
+
+
+			&.item-1 {
+				a.circle {
+					&:before {
+						background-position: 0 0;
+					}
+
+					&:hover:before {
+					 	background-position: -65px 0px;
+					}
+				}
+
+				&.active {
+					a.circle {
+						&:before {
+							background-position: -65px 0px;
+						}
+					}
+				}
+			}
+
+
+			&.item-2 {
+				a.circle {
+					&:before {
+						background-position: 0 130px;
+					}
+
+					&:hover:before {
+					 	background-position: -65px 130px;
+					}
+				}
+
+				&.active {
+					a.circle {
+						&:before {
+							background-position: -65px 130px;
+						}
+					}
+				}
+			}
+
+
+			&.item-3 {
+				a.circle {
+					&:before {
+						background-position: 0 65px;
+					}
+
+					&:hover:before {
+					 	background-position: -65px 65px;
+					}
+				}
+
+				&.active {
+					a.circle {
+						&:before {
+							background-position: -65px 65px;
+						}
+					}
+				}
+			}
+
+
+			// Descritpion Link
+			.link {
+				display: block;
+				max-width: 205px;
+				margin: 0px auto;
+				text-transform: uppercase;
+				letter-spacing: 0.15em;
+				line-height: 1.7em;
+				font-weight: 700;
+				color: #ffffff;
+			}
+		}
+	}
+}
+/* === switch Content || END // Navigation === */
+
+
+/* === switch Content || Articles === */
+#switchContent {
+	max-width: 860px;
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+}
+/* === switch Content || END // Articles === */
+
+
+
+/* === History Block === */
+#history {
+	background-color: @baseColor-one;
+	color: #ffffff;
+
+	h2 {
+		text-align: center;
+	}
+
+	img {
+		display: block;
+		margin: 0px auto;
+		margin-bottom: 90px;
+
+		&.bigImg {
+			.box-shadow(0px 0px 100px 0px @baseColor-two);
+		}
+	}
+
+	.col-sm-6 {
+		text-align: justify;
+	}
+}
+/* === END // History Block === */
+
+/* === END // MAIN === */
+/* =================== */

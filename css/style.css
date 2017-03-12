@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+/* ==================== */
+/* ====== COLORS ====== */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+}
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1em;
+  line-height: 2em;
+  color: #000000;
+}
+p {
+  margin: 0 0 32px;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 400 ;
+  margin: 0 0 30px;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.3em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 50px;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover,
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+/* ====================== */
+/* === GLOBAL CLASSES === */
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 2px solid #000000;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+img.mobile {
+  display: none;
+}
+/* === END // GLOBAL CLASSES === */
+/* ============================= */
+/* ============ */
+/* === GRID === */
+.centered {
+  float: none;
+  margin: 0px auto;
+}
+.container {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.container > .row {
+  padding: 0 9.72222222%;
+}
+.container .col-xs-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* === END // GRID === */
+/* =================== */
+/* ============== */
+/* === HEADER === */
+header {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background: url('../img/pattern.jpg') repeat top center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+}
+/* === Logo === */
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 430px;
+  height: 250px;
+  background-color: #6a2e92;
+  box-sizing: border-box;
+}
+#logo::before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+#logo a {
+  display: inline-block;
+  vertical-align: middle;
+}
+#logo a img {
+  border: 0px;
+  max-width: 240px;
+  width: 100%;
+  outline: 0;
+}
+/* === END // Logo === */
+/* === END // HEADER === */
+/* ===================== */
+/* ============ */
+/* === MAIN === */
+main {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* === Intro === */
+#intro.container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+#intro .col-sm-6 {
+  position: relative;
+}
+#intro .col-sm-6 img {
+  position: absolute;
+  left: -50px;
+  z-index: -1;
+  text-align: center;
+}
+/* === END // Intro === */
+/* === switch Content || Navigation === */
+#switchItems {
+  background-color: #6a2e92;
+}
+#switchItems ul {
+  display: inline-block;
+  width: 100%;
+}
+#switchItems ul li {
+  position: relative;
+  float: left;
+  width: 33.333333339%;
+  height: 210px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  vertical-align: top;
+  list-style-type: none;
+  text-align: center;
+  color: #ffffff;
+}
+#switchItems ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#switchItems ul li a.circle {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 35px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+#switchItems ul li a.circle:hover {
+  background-color: #461863;
+}
+#switchItems ul li a.circle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  margin: -33px 0 0 -32px;
+  background-image: url('../img/ico_sprite.png');
+}
+#switchItems ul li.active:after {
+  content: '';
+  position: absolute;
+  bottom: -129px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 30px solid #6a2e92;
+  margin-left: -25px;
+}
+#switchItems ul li.active a.circle {
+  background-color: #461863;
+}
+#switchItems ul li.item-1 a.circle:before {
+  background-position: 0 0;
+}
+#switchItems ul li.item-1 a.circle:hover:before {
+  background-position: -65px 0px;
+}
+#switchItems ul li.item-1.active a.circle:before {
+  background-position: -65px 0px;
+}
+#switchItems ul li.item-2 a.circle:before {
+  background-position: 0 130px;
+}
+#switchItems ul li.item-2 a.circle:hover:before {
+  background-position: -65px 130px;
+}
+#switchItems ul li.item-2.active a.circle:before {
+  background-position: -65px 130px;
+}
+#switchItems ul li.item-3 a.circle:before {
+  background-position: 0 65px;
+}
+#switchItems ul li.item-3 a.circle:hover:before {
+  background-position: -65px 65px;
+}
+#switchItems ul li.item-3.active a.circle:before {
+  background-position: -65px 65px;
+}
+#switchItems ul li .link {
+  display: block;
+  max-width: 205px;
+  margin: 0px auto;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.7em;
+  font-weight: 700;
+  color: #ffffff;
+}
+/* === switch Content || END // Navigation === */
+/* === switch Content || Articles === */
+#switchContent {
+  max-width: 860px;
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+}
+/* === switch Content || END // Articles === */
+/* === History Block === */
+#history {
+  background-color: #6a2e92;
+  color: #ffffff;
+}
+#history h2 {
+  text-align: center;
+}
+#history img {
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 90px;
+}
+#history img.bigImg {
+  -webkit-box-shadow: 0px 0px 100px 0px #461863;
+  -moz-box-shadow: 0px 0px 100px 0px #461863;
+  -ms-box-shadow: 0px 0px 100px 0px #461863;
+  -o-box-shadow: 0px 0px 100px 0px #461863;
+  box-shadow: 0px 0px 100px 0px #461863;
+}
+#history .col-sm-6 {
+  text-align: justify;
+}
+/* === END // History Block === */
+/* === END // MAIN === */
+/* =================== */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  /* ============ */
+  /* === MAIN === */
+  /* === Intro === */
+  #intro.container img {
+    left: 20px;
+  }
+  /* === END // Intro === */
+  /* === History Block === */
+  #history .col-lg-6 {
+    text-align: center;
+  }
+  /* === END // History Block === */
+  /* === END // MAIN === */
+  /* =================== */
+}
+@media screen and (min-width: 1080px) and (max-width: 1366px) and (orientation: landscape) {
+  /* ====================== */
+  /* === GLOBAL CLASSES === */
+  .btn {
+    margin-top: 170px;
+  }
+  /* === END // GLOBAL CLASSES === */
+  /* ============================= */
+  /* ============ */
+  /* === MAIN === */
+  /* === Intro === */
+  #intro.container {
+    padding-bottom: 70px;
+  }
+  /* === END // Intro === */
+  /* === END // MAIN === */
+  /* =================== */
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  /* ============== */
+  /* === HEADER === */
+  header {
+    height: 670px;
+  }
+  /* === END // HEADER === */
+  /* ===================== */
+  /* ============ */
+  /* === MAIN === */
+  /* === Intro === */
+  #intro.container {
+    padding: 90px 0;
+  }
+  #intro.container img {
+    max-width: 530px;
+  }
+  /* === END // Intro === */
+  /* === switchItems === */
+  /* Icons */
+  #switchItems ul li a.circle {
+    width: 105px;
+    height: 105px;
+  }
+  #switchItems ul li a.circle:before {
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    background-size: 100px;
+  }
+  #switchItems ul li.item-1 a.circle:hover:before {
+    background-position: -50px 0px;
+  }
+  #switchItems ul li.item-1.active a.circle:before {
+    background-position: -50px 0px;
+  }
+  #switchItems ul li.item-2 a.circle:before {
+    background-position: 0 100px;
+  }
+  #switchItems ul li.item-2 a.circle:hover:before {
+    background-position: -50px 100px;
+  }
+  #switchItems ul li.item-2.active a.circle:before {
+    background-position: -50px 100px;
+  }
+  #switchItems ul li.item-3 a.circle:before {
+    background-position: 0 50px;
+  }
+  #switchItems ul li.item-3 a.circle:hover:before {
+    background-position: -50px 50px;
+  }
+  #switchItems ul li.item-3.active a.circle:before {
+    background-position: -50px 50px;
+  }
+  /* === END // switchItems === */
+  /* === switchContent === */
+  #switchContent.container {
+    padding: 120px 0;
+  }
+  /* === END // switchContent === */
+  /* === END // MAIN === */
+  /* =================== */
+}
+@media screen and (max-width: 767px) {
+  /* ============ */
+  /* === MAIN === */
+  /* === Intro === */
+  #intro {
+    text-align: center;
+  }
+  #intro .col-sm-6 img {
+    margin-top: 40px;
+    position: initial;
+    width: 100%;
+  }
+  /* === END // Intro === */
+  /* === switchItems === */
+  #switchItems {
+    position: relative;
+    padding: 0;
+  }
+  #switchItems:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -29px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 30px solid #6a2e92;
+    margin-left: -25px;
+  }
+  #switchItems ul li.active:after {
+    display: none;
+  }
+  /* === END // switchItems === */
+  /* === END // MAIN === */
+  /* =================== */
+}
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  /* ============== */
+  /* === HEADER === */
+  header {
+    height: 355px;
+  }
+  /* Logo */
+  #logo {
+    width: 280px;
+    height: 170px;
+  }
+  #logo a img {
+    max-width: 180px;
+  }
+  /* END // Logo */
+  /* === END // HEADER === */
+  /* ===================== */
+  /* ============ */
+  /* === MAIN === */
+  /* === switchItems === */
+  #switchItems .container {
+    padding: 40px 0;
+  }
+  #switchItems:after {
+    bottom: -29px;
+  }
+  #switchItems ul li {
+    height: auto;
+    font-size: 0.75em;
+    /* Icons */
+  }
+  #switchItems ul li a.circle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  #switchItems ul li a.circle:before {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    background-size: 80px;
+  }
+  #switchItems ul li.item-1 a.circle:hover:before {
+    background-position: -40px 0px;
+  }
+  #switchItems ul li.item-1.active a.circle:before {
+    background-position: -40px 0px;
+  }
+  #switchItems ul li.item-2 a.circle:before {
+    background-position: 0 80px;
+  }
+  #switchItems ul li.item-2 a.circle:hover:before {
+    background-position: -40px 80px;
+  }
+  #switchItems ul li.item-2.active a.circle:before {
+    background-position: -40px 80px;
+  }
+  #switchItems ul li.item-3 a.circle:before {
+    background-position: 0 40px;
+  }
+  #switchItems ul li.item-3 a.circle:hover:before {
+    background-position: -40px 40px;
+  }
+  #switchItems ul li.item-3.active a.circle:before {
+    background-position: -40px 40px;
+  }
+  /* === END // switchItems === */
+  /* === switchContent === */
+  #switchContent .container {
+    padding: 90px 0;
+  }
+  /* === END // switchContent === */
+  /* === History Block === */
+  #history .logoLiberty {
+    max-width: 230px;
+  }
+  /* === END // History Block === */
+  /* === END // MAIN === */
+  /* =================== */
+}
+@media screen and (max-width: 414px) {
+  header {
+    background-size: 190%;
+  }
+}
+@media screen and (max-width: 374px) {
+  /* ============ */
+  /* === MAIN === */
+  /* === switchItems === */
+  /* Icons */
+  #switchItems .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #switchItems ul li a.circle {
+    margin-bottom: 0;
+  }
+  #switchItems ul li .link {
+    display: none;
+  }
+  /* END //  Icons */
+  /* === END // switchItems === */
+  /* === END // MAIN === */
+  /* =================== */
+}
