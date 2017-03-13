@@ -66,9 +66,6 @@ a:focus {
   background-color: #000000;
   color: #ffffff;
 }
-img.mobile {
-  display: none;
-}
 /* === END // GLOBAL CLASSES === */
 /* ============================= */
 /* ============ */
@@ -409,6 +406,16 @@ section {
   /* === END // switchContent === */
   /* === END // MAIN === */
   /* =================== */
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: inherit;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: inherit;
+  }
 }
 @media screen and (max-width: 767px) {
   /* ============ */

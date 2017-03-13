@@ -6,6 +6,7 @@
 
 
 @media only screen and (min-width: 1200px) {
+	// override bootstrap width
 	.container {
 		max-width: 1440px;
 		width: 100%;
@@ -192,9 +193,18 @@
 	/* =================== */
 }
 
+@media screen and (min-width: 992px) {
+	// override bootstrap width
+	.container {
+	    width: inherit;
+	}
+}
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (min-width: 768px) {
+	// override bootstrap width
+	.container {
+	    width: inherit;
+	}
 }
 
 @media screen and (max-width: 767px) {
